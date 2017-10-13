@@ -1,0 +1,37 @@
+<template>
+    <p>${label}</p>
+    <button click.delegate="updateContent()"> Update </button>
+    <button click.trigger="cancelUpdate()"> Cancel </button><br/><br/>
+    <input id="name" type="text" value.bind="myData" />
+    <p>${myData}</p>
+    <button click.delegate="publish()">publish</button><br/>
+    <button click.delegate="subscribe()">subscribe</button><br/>
+    <button click.delegate = "dispose()">dispose</button>
+
+    <!-- Form Test -->
+    <form role = "form" submit.delegate="signIn()">
+        <br/> 
+        <!-- email textbox        -->
+        <label for ="email">Email</label>
+        <input type="text" value.bind = "email" placeholder="Email">
+        <!-- password textbox -->
+        <label for ="password">Password</label>
+        <input type="password" value.bind = "password" placeholder="Password">
+        <!-- checkbox -->
+        <label for="checkbox">Checkbox</label>
+        <input type="checkbox" id="checkbox" checked.bind="isChecked"/>
+        <br/>
+        <!-- radio button -->
+        <label repeat.for="option of options">
+            <!-- repeat.for 循环遍历生成多个options -->
+            <input type="radio" name="myOptions" model.bind = "option" checked.bind="$parent.selectedOption"/>
+            ${option.text}
+        </label><br>
+        <button type="submit">Sing in</button>    
+    </form>
+    <br/>
+    <!-- refs -->
+    <input type="text" ref="name"/>
+    <div> ${name.value}</div>
+
+</template>
