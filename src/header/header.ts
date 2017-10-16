@@ -1,23 +1,20 @@
-import {inject} from 'aurelia-framework';
+import {autoinject} from 'aurelia-framework';
 import { bindable, customElement } from 'aurelia-templating';
-import {Router, RouterConfiguration} from 'aurelia-router';
+import {AppRouter, RouterConfiguration} from 'aurelia-router';
 
-@customElement("header-part")
-
+//@customElement("header-part")
+@autoinject
 export class Header{
-    private router:Router;
+    private router:AppRouter;
 
-    configureRouter(config:RouterConfiguration, router:Router){
-        config.title = 'Aurelia';
+    constructor(){
 
-        config.map([
-            {
-                route:['','home'],name:'home',moduleId:'../components/about/about',nav:true,title:'About'
-            },
-            {
-                route:'about',name:'about',moduleId:'../components/info/info',nav:true,title:'Info'
-            }
-        ]);
-        this.router = router;
+        let b = 1;
+    }
+
+    
+
+    attached(){
+        let a = 2;
     }
 }
