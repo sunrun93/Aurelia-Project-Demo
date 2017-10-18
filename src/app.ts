@@ -3,7 +3,7 @@ import {autoinject} from 'aurelia-framework';
 @autoinject
 export class App {
   private router: AppRouter;
-  message = 'Hello World!';
+  private renderTab = true;
 
   configureRouter( config: RouterConfiguration,  router: AppRouter ){
     config.title = 'Aurelia  aaa';
@@ -17,5 +17,10 @@ export class App {
         }
     ]);
     this.router = router;
+  }
+
+  private newTab(){
+    this.renderTab = false;
+
   }
 }

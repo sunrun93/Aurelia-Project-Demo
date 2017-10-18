@@ -3,15 +3,19 @@
     <require from="./content/content"></require>
     <require from="./footer/footer"></require>
 
-    <header-part class="view-header"></header-part>
-    <content-part class="view-main"></content-part>
-    <nav>
-      <ul>
-        <li repeat.for="item of router.navigation">
-          <a href.bind="item.href">${item.title}</a>
-        </li>
-      </ul>
-    </nav> 
-    <router-view></router-view>
+    <header-part class="view-header">
+    </header-part>
+    <button click.delegate="newTab()">Clean</button>
+    <div show.bind = "renderTab">
+      <content-part class="view-main" ></content-part>
+      <nav>
+        <ul>
+          <li repeat.for="item of router.navigation">
+            <a href.bind="item.href">${item.title}</a>
+          </li>
+        </ul>
+      </nav> 
+      <router-view></router-view>
+    </div>
     <footer-part class="view-footer"></footer-part>
 </template>
