@@ -16,8 +16,12 @@ export class Content {
     private selectedOption = {};
     private router;
 
+   
+  
+
     constructor(private eventAggregator){
         this.eventAggregator = eventAggregator;
+               
     }
 
     attached(){
@@ -33,6 +37,8 @@ export class Content {
             {id:3,text:"Third"}
         ];
         this.selectedOption = this.options[0];
+
+      
     }
 
     private updateContent(){
@@ -70,4 +76,6 @@ export class Content {
         };
         console.log(userData);
     }
+
+    
 }
