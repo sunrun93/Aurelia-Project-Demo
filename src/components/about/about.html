@@ -1,4 +1,7 @@
 <template>
+    <require from="./about.css"></require>
+    <require from="./tree-node"></require>
+    
     <h1>About11</h1> 
-    <div repeat.for="node of basicLevelNodes">${node.label}</div>
+    <tree-node class="rootLevelNodel" repeat.for="node of rootNodes" tree-node.bind="node"></tree-node>
 </template>

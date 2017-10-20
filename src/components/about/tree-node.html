@@ -1,0 +1,7 @@
+<template>
+    <require from="./tree-node.css"></require>
+    <div class="c-tree-node__item ${treeNode.isGroup? 'group-node':'single-node'}" title.bind="treeNode.name">${treeNode.name}</div>
+    <div class="c-tree-node__child-node" if.bind="treeNode.isGroup" repeat.for="node of treeNode.children">${node.name}
+        <span class = "c-tree-node__child-equation">${node.equation}</span>
+    </div>
+</template>

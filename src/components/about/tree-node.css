@@ -1,0 +1,17 @@
+.group-node{
+    width:200px;
+    height:30px;
+    border:1px solid #999;
+    font-weight: bold;
+}
+
+.single-node{
+    width:200px;
+    height:60px;
+    border:1px solid #999;
+}
+
+.c-tree-node__child-node{
+    width:200px;
+    border: 1px solid #999;
+}
