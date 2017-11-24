@@ -15,3 +15,15 @@
     width:200px;
     border: 1px solid #999;
 }
+
+.right-click-context-menu{
+    display: block;
+    border: double solid red;
+    list-style: none;
+    position: absolute;
+}
+.right-click-context-menu li{
+    width: 150px;
+    background-color: rgb(255, 255, 0);
+    border: 1px solid rgb(153, 153, 153);
+}
